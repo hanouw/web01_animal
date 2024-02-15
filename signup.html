@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Signup 2</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,0,0" />
+        <!-- CSS -->
+        <link rel="stylesheet" href="signup.css" />
+    </head>
+    <body>
+        <img class="clouds" src="resource/bg.svg" />
+        <div class="signup">
+            <h2>회원가입</h2>
+            <h3>쉽고 간편한 회원가입</h3>
+            <form class="form" action="signin.html">
+                <div class="textbox">
+                    <input type="text" required name="name" />
+                    <label>이름</label>
+                    <span class="material-symbols-outlined"> account_circle </span>
+                </div>
+                <div class="textbox">
+                    <input type="text" required name="email" />
+                    <label>이메일</label>
+                    <span class="material-symbols-outlined"> email </span>
+                </div>
+                <div class="textbox">
+                    <input type="text" required name="phonenum" />
+                    <label>전화번호</label>
+                    <span class="material-symbols-outlined"> phone </span>
+                </div>
+                <div class="textbox">
+                    <input type="password" required name="pw" />
+                    <label>비밀번호</label>
+                    <span class="material-symbols-outlined"> key </span>
+                </div>
+                <div class="textbox">
+                    <input type="password" required name="confirm_pw" />
+                    <label>비밀번호 확인</label>
+                    <span class="material-symbols-outlined"> key </span>
+                </div>
+                <p>
+                    이미 계정이 있나요?
+                    <a href="signin.html">로그인하기</a>
+                </p>
+
+                <button type="submit">
+                    제출
+                    <span class="material-symbols-outlined"> arrow_forward </span>
+                </button>
+            </form>
+        </div>
+        <!-- 자바스크립트(유효성검사 해당) -->
+        <script src="signup.js"></script>
+    </body>
+</html>

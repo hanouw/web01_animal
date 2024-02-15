@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .main {
+                text-align: center;
+            }
+            .words {
+                text-align: left;
+            }
+            .container01 {
+                background-color: lightblue;
+                /* width: 180px; */
+            }
+            .container02 {
+                background-color: lightcoral;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <!-- 과제: 가능한 다양한 태그를 사용해서 회원 가입 폼 만들기 * (form, table, post활용) submit 있어야함 -->
+            <form action="page02.html" method="post">
+                <div class="headline">
+                    <h1>--------------회원가입 Step1--------------</h1>
+                    <br />
+                </div>
+                <div>
+                    <div class="container01">
+                        <div class="words">성:</div>
+                        <br />
+                        <input type="text" name="tag_name01" required placeholder="예: 홍" />
+                        <br />
+                        <br />
+                    </div>
+                </div>
+                <div>
+                    <div class="container02">
+                        <div class="words">이름:</div>
+                        <br />
+                        <input type="text" name="tag_name02" required placeholder="예: 길동" />
+                        <br />
+                        <br />
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <br />
+                        <button>다음</button><br /><br />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

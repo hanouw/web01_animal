@@ -1,0 +1,123 @@
+.card {
+    /* 검은색으로 얹어지는 화면 */
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 80vw;
+    height: 100vh;
+    color: #fff;
+    background: #000;
+    background-position: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card img {
+    width: 80vw;
+    height: 100vh;
+    object-fit: cover;
+    backface-visibility: hidden;
+    transition: all 0.3s ease;
+    vertical-align: top;
+}
+
+.corner::before,
+.corner::after {
+    position: absolute;
+    content: "";
+    background: #fff;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.right-top::before,
+.right-top::after {
+    top: 2rem;
+    right: 2rem;
+}
+
+.right-bottom::before,
+.right-bottom::after {
+    bottom: 2rem;
+    right: 2rem;
+}
+
+.left-top::before,
+.left-top::after {
+    top: 2rem;
+    left: 2rem;
+}
+
+.left-bottom::before,
+.left-bottom::after {
+    bottom: 2rem;
+    left: 2rem;
+}
+
+/* 가로선 */
+.corner::before {
+    width: 0;
+    height: 2px;
+}
+
+/* 세로선 */
+.corner::after {
+    height: 0;
+    width: 2px;
+}
+
+.card figcaption {
+    /* 마우스 올라갔을 때 화면전환 효과 */
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    max-width: 30rem;
+    width: 100%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.card h3 {
+    font-size: 3.6rem;
+    font-weight: 100;
+    opacity: 0;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.1rem;
+    transition: all 0.4s ease;
+}
+
+.card p {
+    opacity: 0;
+    font-size: 1.6rem;
+    transition: all 0.4s ease;
+}
+
+.card:hover img {
+    zoom: 1;
+    filter: alpha(opacity=20);
+    opacity: 0.3;
+}
+
+.card:hover .corner::before {
+    width: 40px; /* 가로길이 */
+    opacity: 1;
+    transition-delay: 0.2s;
+}
+
+.card:hover .corner::after {
+    height: 40px; /* 세로길이 */
+    opacity: 1;
+    transition-delay: 0.2s;
+}
+
+.card:hover h3 {
+    opacity: 1;
+    transition-delay: 0.3s;
+}
+
+.card:hover p {
+    opacity: 1;
+    transition-delay: 0.35s;
+}
