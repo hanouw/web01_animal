@@ -5,18 +5,19 @@
     left: 0;
     margin: 0;
     width: 100vw;
-    height: 85vh;
+    height: 850px;
     /* height: 100vh; */
     color: #fff;
     background: #000;
     background-position: 100%;
     cursor: pointer;
     transition: all 0.3s ease;
+    /* overflow-y: hidden; */
 }
 
 .card img {
     width: 100vw;
-    height: 85vh;
+    height: 850px;
     /* height: 100vh; */
     object-fit: cover;
     backface-visibility: hidden;
@@ -24,7 +25,7 @@
     vertical-align: top;
 }
 
-.corner::before,
+/* .corner::before,
 .corner::after {
     position: absolute;
     content: "";
@@ -56,22 +57,22 @@
 .left-bottom::after {
     bottom: 2rem;
     left: 2rem;
-}
+} */
 
 /* 가로선 */
-.corner::before {
+/* .corner::before {
     width: 0;
     height: 2px;
-}
+} */
 
 /* 세로선 */
-.corner::after {
+/* .corner::after {
     height: 0;
     width: 2px;
-}
+} */
 
 .card figcaption {
-    /* 마우스 올라갔을 때 화면전환 효과 */
+    /* 마우스 올라갔을 때 화면전환 효과 글자 부분 */
     position: absolute;
     text-align: center;
     top: 50%;
@@ -83,6 +84,7 @@
 
 .card h3 {
     font-size: 3.6rem;
+    color: #fff;
     font-weight: 100;
     opacity: 0;
     margin-bottom: 0.5rem;
@@ -93,6 +95,7 @@
 .card p {
     opacity: 0;
     font-size: 1.6rem;
+    color: #fff;
     transition: all 0.4s ease;
 }
 
@@ -102,17 +105,19 @@
     opacity: 0.3;
 }
 
-.card:hover .corner::before {
-    width: 40px; /* 가로길이 */
+/* .card:hover .corner::before {
+    width: 40px;
+    가로길이
     opacity: 1;
     transition-delay: 0.2s;
-}
+} */
 
-.card:hover .corner::after {
-    height: 40px; /* 세로길이 */
+/* .card:hover .corner::after {
+    height: 40px;
+    세로길이
     opacity: 1;
     transition-delay: 0.2s;
-}
+} */
 
 .card:hover h3 {
     opacity: 1;
@@ -122,4 +127,50 @@
 .card:hover p {
     opacity: 1;
     transition-delay: 0.35s;
+}
+
+.card:hover img {
+    filter: blur(5px);
+}
+
+/* ====================================================================== 상단 글자 영역 ====================================================================== */
+
+.card > .header {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    margin: 0;
+    height: 86px;
+    z-index: 1;
+}
+
+.nav {
+    display: flex;
+    justify-content: start;
+    margin-left: 5vw;
+    line-height: 86px;
+    /* background-color: red; */
+}
+
+.nav > .intro {
+    /*home,about,service,contact를 가로로 배치*/
+    display: flex;
+    width: calc(100vw - 100px);
+    /*헤더 부분에 영역을 맞춰줌*/
+    justify-content: flex-end; /*글자 끝에 맞춰춤 end위치에 있는 글자 조정*/
+    line-height: 86px; /*글자의 높낮이 조정*/
+    /* background: blue; */
+}
+
+.nav > .intro > li {
+    /*home,about,service,contact사이 거리 띄우기*/
+    margin-left: 84px;
+}
+
+.nav > .intro > li > a {
+    color: white; /*글자 색 지정할 때에는 정확하게 지정할 대상에 지정*/
+}
+
+.nav > .logo > a {
+    color: white; /*글자 색 지정할 때에는 정확하게 지정할 대상에 지정*/
 }
